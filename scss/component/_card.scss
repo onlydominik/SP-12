@@ -1,0 +1,11 @@
+.card {
+  min-width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card__background {
+  background: url(../images/bg-pattern-card.svg);
+  background-size: contain;
+  height: 7rem;
+}

@@ -1,0 +1,21 @@
+$colors: (
+  "blue": (
+    100: hsl(227, 10%, 46%),
+    200: hsl(229, 23%, 23%),
+  ),
+  "cyan": (
+    100: hsl(185, 75%, 39%),
+  ),
+
+  "neutral": (
+    100: hsla(0, 0%, 59%, 0.301),
+  ),
+);
+
+:root {
+  @each $category, $subcategory in $colors {
+    @each $name, $value in $subcategory {
+      --clr-#{$category}-#{$name}: #{$value};
+    }
+  }
+}

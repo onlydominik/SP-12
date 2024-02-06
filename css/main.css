@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --clr-blue-100: hsl(227, 10%, 46%);
+  --clr-blue-200: hsl(229, 23%, 23%);
+  --clr-cyan-100: hsl(185, 75%, 39%);
+  --clr-neutral-100: hsla(0, 0%, 59%, 0.301);
+}
+
+:root {
+  --fw-400: 400;
+  --fw-700: 700;
+  --fs-400: 0.75rem;
+  --fs-500: 1rem;
+  --fs-600: 1.0625rem;
+}
+
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+:root {
+  font-size: 100%;
+}
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* revert for bug in Chromium browsers
+       - fix for the content editable attribute will work properly.
+       - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+h1,
+h2 {
+  color: var(--clr-blue-200);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--fs-600);
+}
+
+p {
+  color: var(--clr-blue-100);
+  font-size: var(--fs-400);
+}
+
+.card {
+  min-width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card__background {
+  background: url(../images/bg-pattern-card.svg);
+  background-size: contain;
+  height: 7rem;
+}
+
+.stats {
+  gap: 2rem;
+  border-top: 1px solid var(--clr-neutral-100);
+  padding: 1.4rem 0;
+  margin-top: var(--size-100);
+}
+.stats p {
+  letter-spacing: 0.1rem;
+  font-size: 0.625em;
+}
+
+.stats__col {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.avatar {
+  flex-direction: column;
+  margin-top: -17%;
+}
+.avatar p {
+  margin-top: 0.4em;
+}
+.avatar span {
+  font-weight: 400;
+  margin-left: 0.2em;
+}
+
+.avatar__image {
+  border-radius: 50%;
+  width: 5.5rem;
+  border: 5px solid white;
+  margin-bottom: var(--size-100);
+}
+
+:root {
+  font-size: 112.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-color: var(--clr-cyan-100);
+  background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+  background-repeat: no-repeat;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --size-100: 1.3rem;
+}
+
+/*# sourceMappingURL=main.css.map */
